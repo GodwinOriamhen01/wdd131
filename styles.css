@@ -1,0 +1,204 @@
+/* Page background */
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", serif;
+}
+
+/* Centered container */
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main heading */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Blue subheading */
+.subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e4d8b; /* Deep BYU-style blue */
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Intro paragraph */
+.intro {
+    font-size: 17px;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 25px;
+}
+
+/* Italic line before list */
+.italic {
+    font-style: italic;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+/* Numbered list */
+.list {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 650px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: black;
+}
+
+.list li {
+    margin-bottom: 18px;
+}
+.footer-image {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-image img {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* adjust size if needed */
+    height: auto;
+}
+
+
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+
+    /* NEW BORDER + PADDING */
+    border: 1.5px solid #888; /* slim but visible gray border */
+    padding: 8px;            /* your requested 8px padding */
+    border-radius: 4px;      /* optional: slight rounding like the example */
+}
+/* Default Light Mode */
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", serif;
+}
+
+/* Theme selector bar */
+.theme-header {
+    text-align: center;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Main container with border + padding */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    border: 1.5px solid #888;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Headings */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e4d8b;
+    margin-bottom: 30px;
+}
+
+/* Text */
+.intro, .italic, .list {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* List */
+.list {
+    text-align: left;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.list li {
+    margin-bottom: 18px;
+}
+
+/* Footer text */
+.footer-text {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Footer image */
+.footer-image {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-image img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ---------------------- */
+/* DARK MODE STYLING      */
+/* ---------------------- */
+
+.dark {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.dark .container {
+    border-color: #bbb;
+}
+
+.dark .subtitle {
+    color: #7ab8ff; /* lighter blue for dark mode */
+}
+
+.dark .theme-header {
+    background-color: #333;
+    border-bottom-color: #555;
+}
+.dark .title {
+    color: white;
+}
+
+.dark .intro,
+.dark .italic,
+.dark .list li,
+.dark .footer-text {
+    color: white;
+}
+
+.dark .subtitle {
+    color: #7ab8ff; /* lighter blue for dark mode */
+}
