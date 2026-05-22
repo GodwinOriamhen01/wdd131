@@ -1,7 +1,6 @@
 // MENU ELEMENTS
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
-const closeMenu = document.getElementById("close-menu");
 
 // MODAL ELEMENTS
 const modal = document.getElementById("modal");
@@ -9,14 +8,9 @@ const modalImg = document.getElementById("modal-img");
 const modalClose = document.getElementById("modal-close");
 const thumbs = document.querySelectorAll(".thumb");
 
-// OPEN MENU
+// OPEN/CLOSE MOBILE MENU
 hamburger.addEventListener("click", () => {
-  menu.classList.add("open");
-});
-
-// CLOSE MENU
-closeMenu.addEventListener("click", () => {
-  menu.classList.remove("open");
+  menu.classList.toggle("open");
 });
 
 // OPEN MODAL
