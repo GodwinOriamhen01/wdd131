@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Ticket</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <h1>Event Ticket</h1>
+
+  <form id="ticketForm">
+    <label>First Name
+      <input type="text" id="firstName" required>
+    </label>
+
+    <label>Last Name
+      <input type="text" id="lastName" required>
+    </label>
+
+    <label>Email
+      <input type="email" id="email" required>
+    </label>
+
+    <label>Type
+      <select id="type" required>
+        <option value="">Choose one</option>
+        <option value="student">Student</option>
+        <option value="guest">Guest</option>
+      </select>
+    </label>
+
+    <label>Event Date
+      <input type="date" id="eventDate" required>
+    </label>
+
+    <!-- Hidden dynamic div -->
+    <div id="extraField" hidden>
+      <label id="extraLabel"></label>
+      <input type="text" id="extraInput">
+    </div>
+
+    <button type="submit">Create Ticket</button>
+  </form>
+
+  <div id="messages"></div>
+
+  <script src="form.js"></script>
+</body>
+</html>
