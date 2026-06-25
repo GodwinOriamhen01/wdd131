@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#hike-container {
+  margin-top: 20px;
+}
+
+.hike-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.hike-tags button {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  border-radius: 4px;
+}
+
+.rating {
+  font-size: 20px;
+}
