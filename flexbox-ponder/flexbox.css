@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+hr {
+  margin-top: 50px;
+}
+
+/* MEDIA CARD — MOBILE FIRST */
+.media-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+/* GALLERY — MOBILE FIRST */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* LARGER DEVICES */
+@media screen and (min-width: 700px) {
+
+  /* Media card becomes horizontal */
+  .media-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Gallery becomes multi-column */
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .gallery .media-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
