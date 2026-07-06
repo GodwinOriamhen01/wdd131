@@ -15,6 +15,46 @@ const recipes = [
     rating: 5,
     tags: ["dessert", "baking"],
     ingredients: ["flour", "cocoa", "eggs"]
+  },
+  {
+    name: "Black Beans and Rice",
+    description: "A hearty, savory classic with seasoned black beans over fluffy rice.",
+    image: "images/black-beans-and-rice.jpg",
+    rating: 4,
+    tags: ["dinner", "vegetarian"],
+    ingredients: ["black beans", "rice", "onion", "garlic", "cumin"]
+  },
+  {
+    name: "Chocolate Chip Cookies",
+    description: "Classic chewy cookies loaded with melty chocolate chips.",
+    image: "images/chocolate-chip-cookies.jpg",
+    rating: 5,
+    tags: ["dessert", "baking"],
+    ingredients: ["flour", "butter", "brown sugar", "chocolate chips"]
+  },
+  {
+    name: "Roasted Potatoes",
+    description: "Crispy on the outside, fluffy on the inside, with herbs and olive oil.",
+    image: "images/roasted-potatoes.jpg",
+    rating: 4,
+    tags: ["side dish", "vegetarian"],
+    ingredients: ["potatoes", "olive oil", "rosemary", "garlic"]
+  },
+  {
+    name: "Sweet Potato Waffle",
+    description: "A cozy twist on breakfast waffles made with mashed sweet potato.",
+    image: "images/sweet-potato-waffle.jpg",
+    rating: 4,
+    tags: ["breakfast"],
+    ingredients: ["sweet potato", "flour", "eggs", "cinnamon"]
+  },
+  {
+    name: "German Gooseberry Cake",
+    description: "A traditional German cake topped with tart gooseberries and a crumbly streusel.",
+    image: "images/german-gooseberry-cake.jpg",
+    rating: 5,
+    tags: ["dessert", "baking"],
+    ingredients: ["gooseberries", "flour", "butter", "sugar", "eggs"]
   }
 ];
 
@@ -63,7 +103,7 @@ function recipeTemplate(recipe) {
 
 // Rendering
 function renderRecipes(recipeList) {
-  const container = document.querySelector("main");
+  const container = document.querySelector(".recipe-list");
   if (recipeList.length === 0) {
     container.innerHTML = `<p>No recipes found.</p>`;
     return;
