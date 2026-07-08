@@ -1,19 +1,16 @@
+// Character Object
 const character = {
     name: "Snortleblat",
     class: "Swamp Beast Diplomat",
-    level: 8,
-    health: 0,
+    level: 5,
+    health: 100,
     image: "images/snortleblat.png",
 
     attacked() {
-        if (this.health > 0) {
-            this.health -= 20;
-
-            if (this.health <= 0) {
-                this.health = 0;
-                document.getElementById("status").textContent =
-                    "Your character has died.";
-            }
+        this.health -= 20;
+        if (this.health <= 0) {
+            this.health = 0;
+            document.getElementById("status").textContent = "Snortleblat has died!";
         }
         updateUI();
     },
@@ -24,14 +21,13 @@ const character = {
     }
 };
 
+// Update UI
 function updateUI() {
-    document.getElementById("char-name").textContent = character.name;
-    document.getElementById("char-class").textContent = character.class;
     document.getElementById("char-level").textContent = character.level;
     document.getElementById("char-health").textContent = character.health;
-    document.getElementById("char-img").src = character.image;
 }
 
+// Button Listeners
 document.getElementById("attack-btn").addEventListener("click", () => {
     character.attacked();
 });
@@ -39,5 +35,3 @@ document.getElementById("attack-btn").addEventListener("click", () => {
 document.getElementById("level-btn").addEventListener("click", () => {
     character.levelUp();
 });
-
-updateUI();
