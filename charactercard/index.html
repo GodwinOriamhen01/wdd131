@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Card</title>
+    <title>Character Card - Snortleblat</title>
 
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Snortleblat - Character Card">
-    <meta property="og:description" content="A fantasy character card built for WDD131.">
+    <!-- Social Media Meta Information -->
+    <meta property="og:title" content="Snortleblat - Swamp Beast Diplomat">
+    <meta property="og:description" content="A powerful swamp beast diplomat with dynamic stats.">
     <meta property="og:image" content="images/snortleblat.png">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snortleblat - Character Card">
+    <meta name="twitter:image" content="images/snortleblat.png">
+
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
     <main class="card">
-        <img id="char-img" src="images/snortleblat.png" alt="Character Image">
+        <img class="image" src="images/snortscreenshot.png" alt="Character Image">
 
-        <h1 id="char-name">Snortleblat</h1>
+        <div class="name">Snortleblat</div>
 
-        <p><strong>Class:</strong> <span id="char-class">Swamp Beast Diplomat</span></p>
-        <p><strong>Level:</strong> <span id="char-level">8</span></p>
-        <p><strong>Health:</strong> <span id="char-health">40</span></p>
+        <div class="stats">
+            <p><strong>Class:</strong> <span id="char-class">Swamp Beast Diplomat</span></p>
+            <p><strong>Level:</strong> <span id="char-level">5</span></p>
+            <p><strong>Health:</strong> <span id="char-health">100</span></p>
+        </div>
 
         <div class="buttons">
             <button id="attack-btn">Attacked</button>
