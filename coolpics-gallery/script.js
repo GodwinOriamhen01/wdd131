@@ -1,30 +1,38 @@
+// Select elements
 const gallery = document.querySelector('.gallery');
 const modal = document.querySelector('#viewer');
 const modalImage = document.querySelector('#viewer-img');
-const closeButton = modal.querySelector('.close-viewer');
+const closeButton = document.querySelector('.close-viewer');
 
-// OPEN MODAL
+// Open modal when clicking a thumbnail
 gallery.addEventListener('click', (e) => {
     if (e.target.tagName === 'IMG') {
-        const fullImage = e.target.getAttribute('data-full');
-        modalImage.src = fullImage;
+
+        // Get the small image path
+        const smallSrc = e.target.getAttribute('src');
+
+        // Replace "-sm" with "-lg" to load the large version
+        const largeSrc = smallSrc.replace('-sm', '-lg');
+
+        modalImage.src = largeSrc;
+
         modal.showModal();
     }
 });
 
-// CLOSE BUTTON
+// Close modal when clicking the X button
 closeButton.addEventListener('click', () => {
     modal.close();
 });
 
-// CLICK OUTSIDE IMAGE
+// Close modal when clicking outside the image
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.close();
     }
 });
 
-// ESC KEY CLOSE
+// Close modal with ESC key
 document.addEventListener('keydown', (event) => {
     if (event.key === "Escape" && modal.open) {
         modal.close();
