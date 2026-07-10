@@ -1,0 +1,258 @@
+/* ========================= */
+/* 🎃 SPOOKY HOLLOW WEBSITE */
+/* ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@300;500&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #f6f1d1;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ff7518, #cc5500);
+  padding: 20px;
+  border-bottom: 3px solid #111;
+  box-shadow: 0 0 30px #ff7518;
+  position: relative;
+  z-index: 5;
+}
+
+header h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  color: #fff7e6;
+  text-shadow: 0 0 25px #000;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  background-color: #fff7e6;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+.active {
+  background-color: #000;
+  color: #ff7518;
+  box-shadow: 0 0 15px #ff7518;
+}
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  z-index: 3;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ff7518;
+}
+
+.caption {
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-shadow: 0 0 15px #ff7518;
+}
+
+/* Sections */
+section {
+  margin: 40px auto;
+  max-width: 800px;
+  background-color: rgba(255, 117, 24, 0.1);
+  border: 1px solid #ff7518;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 117, 24, 0.4);
+  position: relative;
+  z-index: 3;
+}
+
+h2 {
+  font-family: 'Creepster', cursive;
+  color: #ff7518;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #ff7518;
+}
+
+p {
+  color: #f6f1d1;
+  line-height: 1.6;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  position: relative;
+  z-index: 3;
+}
+
+.gallery img {
+  width: 250px;
+  border: 3px solid #ff7518;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ff7518;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #ff7518;
+  padding: 20px;
+  text-shadow: 0 0 10px #ff7518;
+  font-family: 'Creepster', cursive;
+  position: relative;
+  z-index: 5;
+}
+
+/* ========================= */
+/* 🦇 BAT ANIMATION          */
+/* ========================= */
+#bat-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.bat {
+  position: absolute;
+  width: 80px;
+  opacity: 0.8;
+  animation: flyAcross linear forwards;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(-150px) scale(1);
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px)) scale(1.2);
+  }
+}
+
+/* ========================= */
+/* 🌫️ FOG EFFECT            */
+/* ========================= */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/fog.png") repeat;
+  opacity: 0.07;
+  animation: fogMove 60s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes fogMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+/* ========================= */
+/* ✨ TEXT GLOW ON HOVER     */
+/* ========================= */
+h1:hover,
+h2:hover,
+p:hover {
+  text-shadow: 0 0 25px #ff7518, 0 0 50px #ff7518;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* ========================= */
+/* 👁️ RESPONSIVE DESIGN     */
+/* ========================= */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+
+  section {
+    width: 90%;
+  }
+}
+
+/* ========================= */
+/* 🕯️ SPOOKY LOADING EFFECT */
+/* ========================= */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 15px #ff7518, 0 0 40px #ff7518;
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+}
+
+h1 {
+  animation: flicker 3s infinite;
+}
